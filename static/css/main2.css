@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
+svg {
+    fill: var(--color-dark);
+}
+
 :root {
     --color-primary: #7380ec;
     --color-danger: #ff7782;
@@ -30,11 +34,10 @@
     --color-background : #181a1e;
     --color-white : #202528;
     --color-dark : #edeffd;
-    --color-dark-varient : #a3bdcc;
+    --color-dark-variant : #a3bdcc;
     --color-light : rgba(0,0,0,0.4);
     --box-shadow : 0 2rem 3rem var(--color-light);
 }
-
 
 
 * {
@@ -59,7 +62,7 @@ body {
     font-size: 0.88rem;
     background: var(--color-background);
     user-select: none;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .container {
@@ -80,19 +83,23 @@ img {
 }
 
 h1 {
+    color: var(--color-dark);
     font-weight: 800;
     font-size: 1.8rem;
 }
 
 h2 {
+    color: var(--color-dark);
     font-size: 1.4rem;
 }
 
 h3 {
+    color: var(--color-dark);
     font-size : 0.87rem;
 }
 
 h4 {
+    color: var(--color-dark);
     font-size: 0.8rem;
 }
 
@@ -137,12 +144,14 @@ aside {
 }
 
 aside .top {
-    background: white;
+    background: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
 }
+
+
 aside .logo {
     display: flex;
     gap: 0.8rem;
@@ -150,16 +159,16 @@ aside .logo {
 
 aside .logo img {
     width: 2rem;
-    height: 2rem;
+    height: 2rem;   
 }
-aside .cloes {
+aside .close {
     display: none;
 }
 
 /* sidebar */
 
 aside .sidebar {
-    background: white;
+    background: var(--color-white);
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -348,6 +357,7 @@ main .recent-orders table {
     text-align: center;
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
+    color: var(--color-dark);
 }
 
 main .recent-orders table:hover {
@@ -380,7 +390,7 @@ main .recent-orders a {
     gap: 2rem;
 }
 
-.right .top .button {
+.right .top button {
     display: none;
 }
 .right .theme-toggler {
@@ -574,7 +584,7 @@ main .recent-orders a {
         position: absolute;
         bottom: 5rem;
     }
-    aside .cloes {
+    aside .close {
         display: inline-block;
         cursor: pointer;
     }
@@ -591,6 +601,7 @@ main .recent-orders a {
     main .recent-orders  table{
         width: 100%;
         margin: 0;
+        
     }
     .right {
         width: 94%;
